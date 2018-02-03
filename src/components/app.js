@@ -1,7 +1,7 @@
 angular.module('video-player')
   .controller('videoCtrl', function($scope, youTube) {
-    this.videos = window.exampleVideoData;
-    this.currentVideo = window.exampleVideoData[0];
+    // this.videos = window.exampleVideoData;
+    // this.currentVideo = window.exampleVideoData[0];
     
     youTube.search('dogs', (data) => {
       this.currentVideo = data[0];
@@ -13,8 +13,8 @@ angular.module('video-player')
       this.currentVideo = video;
     }; 
     this.searchResults = (query) => {
-      youtube.search(query, (data) => {
-        this.currentVideo = data[1];
+      youTube.search(query, (data) => {
+        this.currentVideo = data[0];
         this.videos = data;
       });
     };

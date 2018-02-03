@@ -1,9 +1,9 @@
 angular.module('video-player')
 
   .component('search', {
-    // TODO
     bindings: {
-      search: '@'
+      search: '<',
+      query: '@'
     },
     templateUrl: 'src/templates/search.html'
   });

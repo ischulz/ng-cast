@@ -9,11 +9,14 @@ angular.module('video-player')
           part: 'snippet',
           q: query,
           type: 'video',
+          videoEmbeddable: true,
           key: window.YOUTUBE_API_KEY
         }
       }).then(function(response) {
         callback(response.data.items);
-        console.log(response);
+        //console.log(response);
       });
     };
   });
+
+  
