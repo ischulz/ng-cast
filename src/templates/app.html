@@ -5,11 +5,11 @@
     </div>
   </nav>
   <div class="row">
-    <div class="col-md-7">
-      <video-player video='$ctrl.video'><h5><em>videoPlayer</em> component goes here</h5></video-player>
+    <div class="col-md-7">  
+      <video-player video='$ctrl.currentVideo'><h5><em>videoPlayer</em> component goes here</h5></video-player>
     </div>
     <div class="col-md-5">
-      <video-list videos='$ctrl.videos' selectVideo='$ctrl.clickVideo'><h5><em>videoList</em> component goes here</h5></video-list>
+      <video-list videos='$ctrl.videos' handle-click='$ctrl.handleClick'><h5><em>videoList</em> component goes here</h5></video-list>
     </div>
   <div>
 </div>

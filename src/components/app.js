@@ -1,15 +1,20 @@
 angular.module('video-player')
-  .controller('videoCtrl', function() {
+  .controller('videoCtrl', function($scope, youTube) {
     this.videos = window.exampleVideoData;
-    this.video = window.exampleVideoData[0];
+    this.currentVideo = window.exampleVideoData[0];
+    
+    youTube.search('dogs', (data) => {
+      this.currentVideo = data[0];
+      this.videos = data;
+    });
+    
 
-
-    this.clickVideo = (newVideo) => {
-      this.video = newVideo;
+    this.handleClick = (video) => {
+      this.currentVideo = video;
     }; 
-    this.search = (query) => {
-      youtube(query, (data) => {
-        this.video = data[1];
+    this.searchResults = (query) => {
+      youtube.search(query, (data) => {
+        this.currentVideo = data[1];
         this.videos = data;
       });
     };
@@ -19,3 +24,5 @@ angular.module('video-player')
     controller: 'videoCtrl',
     templateUrl: 'src/templates/app.html'
   });
+
+

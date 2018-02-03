@@ -1,3 +1,17 @@
 <ul class="video-list">
-  <video-list-entry ng-repeat="video in $ctrl.videos" video="video" selectVideo="$ctrl.selectVideo"></video-list-entry>video-list-entry
+  <video-list-entry 
+    ng-repeat="video in $ctrl.videos" 
+    video="video" 
+    handle-click='$ctrl.handleClick'
+  >
+
+  </video-list-entry>
 </ul>
+
+<!-- <span>
+  {{$ctrl.handleClick.toString()}}
+</span> -->
+
+<!-- <span>
+  {{$ctrl.videos}}
+</span> -->
