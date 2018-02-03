@@ -1,6 +1,7 @@
 angular.module('video-player')
 
   .component('search', {
+
     bindings: {
       search: '<',
       query: '@'

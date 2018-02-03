@@ -1,6 +1,6 @@
-<div class="search-bar form-inline">
-  <input ng-changecute="$ctrl.search(query)" ng-model="query" class="form-control" type="text" />
-  <button ng-click="$ctrl.search(query)" class="btn">
+<form class="search-bar form-inline">
+  <input ng-change="$ctrl.search(query)" ng-model="query" class="form-control" type="text" />
+  <button ng-click="$ctrl.search(query); query=''" class="btn">
     <span class="glyphicon glyphicon-search"></span>
   </button>
-</div>
+</form>
